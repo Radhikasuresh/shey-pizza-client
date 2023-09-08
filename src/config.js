@@ -1,3 +1,3 @@
 export const config = {
-  api: "https://pizza-paradise-app-backend.onrender.com",
+  api: "https://shey-pizza-server.vercel.app",
 };

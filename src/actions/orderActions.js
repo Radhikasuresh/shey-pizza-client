@@ -5,7 +5,7 @@ export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
   const currentUser = getState().loginUserReducer.currentUser;
   const cartItems = getState().cartReducer.cartItems;
   try {
-    const response = await axios.post("/api/orders/placeorder", {
+    const response = await axios.post(`${config.api}/api/orders/placeorder`, {
       token,
       subtotal,
       currentUser,
@@ -23,9 +23,12 @@ export const getUserOrders = () => async (dispatch, getState) => {
   const currentUser = getState().loginUserReducer.currentUser;
   dispatch({ type: "GET_USER_ORDERS_REQUEST" });
   try {
-    const response = await axios.post(`/api/orders/getuserorders`, {
-      userid: currentUser._id,
-    });
+    const response = await axios.post(
+      `${config.api}/api/orders/getuserorders`,
+      {
+        userid: currentUser._id,
+      }
+    );
     console.log(response);
     dispatch({ type: "GET_USER_ORDERS_SUCCESS", payload: response.data });
   } catch (error) {
