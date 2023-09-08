@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom/";
 import RegisterScreen from "./screens/RegisterScreen";
 import LoginScreen from "./screens/LoginScreen";
 import CartScreen from "./screens/CartScreen";
+import OrdersScreen from "./screens/OrdersScreen";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cart" exact component={CartScreen}></Route>
         <Route path="/register" exact component={RegisterScreen}></Route>
         <Route path="/login" exact component={LoginScreen}></Route>
+        <Route path="/orders" exact component={OrdersScreen}></Route>
       </BrowserRouter>
     </div>
   );

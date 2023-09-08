@@ -21,13 +21,13 @@ export default function Checkout({ subtotal }) {
     <div>
       {loading && <Loading />}
       {error && <Error error="Something went wrong" />}
-      {success && <Success success="Your Order Placed Successfully" />}
+      {success && <Success success="Your Order is Placed Successfully😃" />}
 
       <StripeCheckout
         amount={subtotal * 100}
         shippingAddress
         token={tokenHandler}
-        stripeKey="pk_test_51NgNrSSD2zvAhNC6OLbeHTs3Ur5K9WOE58lnNIQzzSNFa4Oq640jOdLPmAdokakNVtLKrLjvhovahVqH4EHdp6b900hyB7jQFP"
+        stripeKey="pk_test_51NgNrSSD2zvAhNC6r2liwcJSzLrJO4uunrWaSFM3gpBDs0HSJgeEUImi5rG0WghsFVCR9BjrqQc60aXUKtMAmndG00W1ABuSkG"
         currency="INR"
       >
         <button style={{ backgroundColor: "green" }} className="btn">
