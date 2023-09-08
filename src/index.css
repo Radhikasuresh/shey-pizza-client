@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans Display', sans-serif;
+  
+    
+    overflow-x: hidden; 
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.nav-link{
+  color:black;
+}
+.navbar-brand{
+  color:black;
+}
+h1{
+  font-size: 20px;
+}
+.flex-container{
+  display: flex;
+
+}
+.btn{
+  background-color: red;
+  color:white;
+}
+select{
+  border-color: black;
+  box-shadow: none;
+}
+.fa-plus{
+  color: green;
+  margin: 5px;
+  cursor: pointer;
+}
+.fa-minus{
+  color:red;
+  margin: 5px;
+  cursor: pointer;
+}
+.fa-trash{
+  color:rgb(189, 21, 21);
+  cursor: pointer;
+}
+input{
+margin-top: 10px ;
+box-shadow: none;
 }
