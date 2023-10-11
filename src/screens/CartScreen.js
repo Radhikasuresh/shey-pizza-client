@@ -6,7 +6,7 @@ import Checkout from "../components/Checkout";
 
 export default function CartScreen() {
   const cartstate = useSelector((state) => state.cartReducer);
-  const cartItems = cartstate.cartItems;
+  const cartItems = cartstate.cartItems; //This array contains the items in the user's shopping cart.
   var subtotal = cartItems.reduce((accum, item) => accum + item.price, 0);
 
   const dispatch = useDispatch();

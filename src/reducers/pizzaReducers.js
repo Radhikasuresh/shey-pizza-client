@@ -3,16 +3,16 @@ export const getAllPizzasReducer = (state = { pizzas: [] }, action) => {
     case "GET_PIZZAS_REQUEST":
       return {
         loading: true,
-        ...state,
+        ...state, //used to retain any existing properties in the state.
       };
     case "GET_PIZZAS_SUCCESS":
       return {
         loading: false,
-        pizzas: action.payload,
+        pizzas: action.payload, //contains an array of pizza data.
       };
     case "GET_PIZZAS_FAILED":
       return {
-        error: action.payload,
+        error: action.payload, //holds information about the failure.
         loading: false,
       };
     default:

@@ -5,6 +5,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         (item) => item._id === action.payload._id
       );
       if (alreadyExists) {
+        //If the item already exists in the cart, it updates the state accordingly.
         return {
           ...state,
           cartItems: state.cartItems.map((item) =>
@@ -12,6 +13,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
           ),
         };
       } else {
+        //If the item is not in the cart, it adds it to the cart.
         return {
           ...state,
           cartItems: [...state.cartItems, action.payload],

@@ -11,6 +11,7 @@ import {
 } from "./reducers/orderReducer";
 
 const finalReducer = combineReducers({
+  //combining individual reducers
   getAllPizzasReducer: getAllPizzasReducer,
   cartReducer: cartReducer,
   registerUserReducer: registerUserReducer,
@@ -25,7 +26,7 @@ const cartItems = localStorage.getItem("cartItems")
 const currentUser = localStorage.getItem("currentUser")
   ? JSON.parse(localStorage.getItem("currentUser"))
   : null;
-
+//for currently logged in user it will show the no .of cart items
 const initialState = {
   cartReducer: {
     cartItems: cartItems,
@@ -36,6 +37,7 @@ const initialState = {
 };
 
 const composeEnhancers = composeWithDevTools({});
+//debugging and inspecting the state changes.
 const store = createStore(
   finalReducer,
   initialState,
